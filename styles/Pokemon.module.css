@@ -1,6 +1,17 @@
 .container {
+    display: flex;
+    justify-content: center;
     text-align: center;
     
+}
+
+.card {
+  width: 30%;
+  border-radius: 2em;
+  border: 2px solid #e33d33;
+  box-shadow: 5px 5px 12px rgba(0, 0, 0, .4);
+  background-color: rgba(34, 34, 34, .8);
+  color: #fff;
 }
 
 .title {
@@ -17,6 +28,13 @@
     margin: .6em auto;
     font-size: 1.2em;
     color: #fff;
+}
+
+.arrow {
+  cursor: pointer;
+  height: 7%;
+  width: 7%;
+  margin: 8%;
 }
 
 .types {

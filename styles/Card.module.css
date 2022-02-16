@@ -54,3 +54,16 @@
     margin-bottom: 1em;
     font-size: 1.4em;
 }
+
+
+
+.hidden_true {
+    display: none;
+    
+}
+
+.hidden_false {
+    display: block;
+}
+
+
