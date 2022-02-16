@@ -6,10 +6,12 @@ export default function navbar(){
 
     return (
         <nav className={ styles.navbar }>
-            <div className={ styles.logo }>
-                <Image src="/images/pokeball.png" width="30" height="30" alt="PokeNext" />
-                <h1>POKENEXT</h1>
-            </div>
+            <Link href="/" > 
+                <div className={ styles.logo }>
+                    <Image src="/images/pokeball.png" width="30" height="30" alt="PokeNext" />
+                    <h1>Poke<span>Next</span></h1>
+                </div>
+            </Link>
 
             <ul className={ styles.link }>
                 <li>
