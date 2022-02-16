@@ -55,7 +55,7 @@ export default function Pokemon( { pokemon }){
     return (
         <div class={styles.container }>
             <div className={ styles.card } >
-                <h1 className={ styles.title }>{ pokemon.name } <span>#{ pokemon.id } </span></h1>
+                <h1 className={ styles.title }>{ pokemon.name } <span>#{ pokemon.id }</span></h1>
 
                 
 
@@ -76,7 +76,7 @@ export default function Pokemon( { pokemon }){
                 
 
                 <div>
-                    <h3>Tipo: </h3>
+                   
                     <div className={ styles.types }>
                         { pokemon.types.map( (item, index) => (
                             <span key={ index } 
@@ -89,13 +89,13 @@ export default function Pokemon( { pokemon }){
 
                 <div className={ styles.data_container }>
                     <div className={ styles.height }>
-                    <h4>Altura: </h4>
-                    <p> { pokemon.height * 10} cm</p> 
+                    <h4>Altura:  </h4>
+                    <p>  { pokemon.height * 10} cm</p> 
                     </div>
 
                     <div className={ styles.weight }>
-                    <h4>Peso: </h4>
-                    <p> { pokemon.weight / 10} kg</p> 
+                    <h4>Peso:  </h4>
+                    <p>  { pokemon.weight / 10} kg</p> 
                     </div>
                 </div>
             </div>

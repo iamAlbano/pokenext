@@ -7,10 +7,12 @@
 .about h1 {
     font-size: 2em;
     margin-bottom: 1em;
+    color: #fff;
 }
 
 .about p {
     max-width: 650px;
     margin: 0 auto 1.5em;
     line-height: 1.4;
+    color: #fff;
 }
