@@ -1,7 +1,13 @@
 import styles from '../../styles/Pokemon.module.css'
+
+import { useRouter } from 'next/router'
 import Link from 'next/link'
 import Image from 'next/image'
+
 import { BsFillArrowRightCircleFill as Right, BsFillArrowLeftCircleFill as Left } from 'react-icons/bs';
+
+import Skeleton from '@mui/material/Skeleton';
+import Stack from '@mui/material/Stack';
 
 let maxPokemons = 251
 
@@ -21,7 +27,7 @@ export const getStaticPaths = async() => {
 
     return {
         paths,
-        fallback: false, 
+        fallback: true, 
         //fallback true renderiza em tempo real
     }
 }
@@ -43,14 +49,34 @@ export const getStaticProps = async( context ) => {
 
 export default function Pokemon( { pokemon }){
 
+    const router = useRouter()
+
+    if(router.isFallback){
+        return (
+            <div class={styles.container }>
+                <Skeleton 
+                variant="rectangular" 
+                width={393} 
+                height={414}
+                sx={{ 
+                    bgcolor: 'rgba(25, 25, 25, 1)',
+                    borderRadius: '2em',
+                
+                }} />
+            </div>
+        )
+    }
+
     let next = `/pokemon/${ pokemon.id + 1 }`
     let previous = `/pokemon/${ pokemon.id - 1 }`
 
     if(pokemon.id == 1 ){
         previous = `/pokemon/${ maxPokemons }`
-    } else if(pokemon.id == maxPokemons){
+    } else if(pokemon.id == 891){
         next = `/pokemon/1`
     }
+
+
 
     return (
         <div class={styles.container }>

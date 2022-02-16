@@ -17,22 +17,24 @@ export default function card( { pokemon } ){
             <div className={ styles.card }>
                 <div className={ styles.img }>
 
-                { loading && (
+                <Image src={`https://cdn.traction.one/pokedex/pokemon/${ pokemon.id }.png`} 
+                    width="130" 
+                    height="140"           
+                    onLoad={ () => 
+                        setLoading(false)
+                    }    
+                   className={ styles.hidden }
+                    />
+
+                {/* { loading && (
                     <CircularProgress color="inherit" className={ styles.loading } />
                                     
                 )
-               }
+               } */}
 
-                <div  >
-                    <Image src={`https://cdn.traction.one/pokedex/pokemon/${ pokemon.id }.png`} 
-                    width="130" 
-                    height="140"
-                    onLoad={ () => 
-                        setLoading(false)
+                
                     
-                    }    
-                    />
-                </div>
+         
                 
 
                 </div>

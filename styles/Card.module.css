@@ -57,13 +57,8 @@
 
 
 
-.hidden_true {
-    display: none;
+.hidden {
     
+    position: absolute !important;
 }
-
-.hidden_false {
-    display: block;
-}
-
 
