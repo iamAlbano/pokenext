@@ -55,7 +55,7 @@ export default function Pokemon( { pokemon }){
 
     if(router.isFallback){
         return (
-            <div class={styles.container }>
+            <div className={styles.container }>
                 
                 <CircularProgress color="error" className={ styles.loading } />
                 <Skeleton 
@@ -85,7 +85,7 @@ export default function Pokemon( { pokemon }){
 
 
     return (
-        <div class={styles.container }>
+        <div className={styles.container }>
             <div className={ styles.card } >
                 <h1 className={ styles.title }>{ pokemon.name } <span>#{ pokemon.id }</span></h1>
 

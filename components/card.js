@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { useState } from 'react'
 import CircularProgress from '@mui/material/CircularProgress';
 
 import styles from '../styles/Card.module.css'
@@ -8,7 +7,6 @@ import styles from '../styles/Card.module.css'
 
 export default function card( { pokemon } ){
 
-    const [loading, setLoading] = useState(true);
 
 
 
@@ -20,17 +18,9 @@ export default function card( { pokemon } ){
                 <Image src={`https://cdn.traction.one/pokedex/pokemon/${ pokemon.id }.png`} 
                     width="130" 
                     height="140"           
-                    onLoad={ () => 
-                        setLoading(false)
-                    }    
+                      
                    className={ styles.hidden }
                     />
-
-                {/* { loading && (
-                    <CircularProgress color="inherit" className={ styles.loading } />
-                                    
-                )
-               } */}
 
                 
                     
