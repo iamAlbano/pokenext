@@ -6,7 +6,7 @@
 }
 
 .card {
-  width: 30%;
+  width: 35%;
   border-radius: 2em;
   border: 2px solid #e33d33;
   box-shadow: 5px 5px 12px rgba(0, 0, 0, .4);
@@ -43,15 +43,24 @@
 
 .arrow {
   cursor: pointer;
-  height: 7%;
-  width: 7%;
-  margin: 8%;
+  height: 6%;
+  width: 6%;
+  margin: 10%;
   transition: .5s;
 }
 
 .arrow:hover {
   fill: #e33d33;
   transition: .5s;
+}
+
+.lazy_load {
+  position: relative;
+}
+
+.loading {
+  position: absolute;
+  margin-top: 30vh;
 }
 
 .types {

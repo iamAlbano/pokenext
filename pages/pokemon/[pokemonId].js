@@ -6,7 +6,9 @@ import Image from 'next/image'
 
 import { BsFillArrowRightCircleFill as Right, BsFillArrowLeftCircleFill as Left } from 'react-icons/bs';
 
+import CircularProgress from '@mui/material/CircularProgress';
 import Skeleton from '@mui/material/Skeleton';
+import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
 
 let maxPokemons = 251
@@ -54,15 +56,19 @@ export default function Pokemon( { pokemon }){
     if(router.isFallback){
         return (
             <div class={styles.container }>
+                
+                <CircularProgress color="error" className={ styles.loading } />
                 <Skeleton 
                 variant="rectangular" 
                 width={393} 
                 height={414}
+                className={ styles.lazy_load }
                 sx={{ 
                     bgcolor: 'rgba(25, 25, 25, 1)',
                     borderRadius: '2em',
                 
                 }} />
+                
             </div>
         )
     }
